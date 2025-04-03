@@ -1,0 +1,13 @@
+{
+    "theme": "Theme",
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+    "menu": "Menu",
+    "SideHeader": {
+        "Dashboard": "Dashboard",
+        "Settings": "Preferences", 
+        "Profile": "Profile", 
+        "Logout": "Logout"
+    }
+  }
+  

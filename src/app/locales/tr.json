@@ -1,0 +1,13 @@
+{
+    "theme": "Tema",
+    "light": "Aydınlık Mod",
+    "dark": "Karanlık Mod",
+    "menu": "Menü",
+    "SideHeader": {
+        "Dashboard": "Ana Sayfa",
+        "Settings": "Seçenekler", 
+        "Profile": "Profil", 
+        "Logout": "Çıkış"
+    }
+  }
+  
