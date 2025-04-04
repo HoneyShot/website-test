@@ -7,7 +7,32 @@
         "Dashboard": "Ana Sayfa",
         "Settings": "Seçenekler", 
         "Profile": "Profil", 
-        "Logout": "Çıkış"
+        "Logout": "Çıkış",
+        "Portfolio": "Portföy",
+        "Blog": "Blog",
+        "Contact": "İletişim"
+    },
+    "landing": {
+        "title": "Hoş Geldiniz",
+        "subtitle": "Modern Web Geliştirme ve Bulut Çözümleri",
+        "portfolioCard": {
+            "title": "Portföy",
+            "description": "Full stack geliştirme, bulut hizmetleri ve web uygulamaları alanındaki çalışmalarımı ve projelerimi görüntüleyin.",
+            "cta": "Portföyü Görüntüle"
+        },
+        "blogCard": {
+            "title": "Blog",
+            "description": "Yazılım geliştirme ve bulut teknolojileri hakkında teknik makaleler ve içgörüler.",
+            "cta": "Blogu Oku"
+        },
+        "contactCard": {
+            "title": "İletişim",
+            "description": "İşbirliği, fırsatlar veya sadece merhaba demek için iletişime geçin.",
+            "cta": "İletişime Geç"
+        }
+    },
+    "footer": {
+        "copyright": "Tüm Hakları Saklıdır."
     }
-  }
+}
   

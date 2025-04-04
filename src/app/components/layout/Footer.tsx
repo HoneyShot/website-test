@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useLanguage } from '../LanguageContext';
 
 export default function Footer() {
     const [year, setYear] = useState<number>(new Date().getFullYear());
+    const { t, lang } = useLanguage();
 
     useEffect(() => {
         setYear(new Date().getFullYear());
@@ -29,9 +31,9 @@ export default function Footer() {
                         rel="noopener noreferrer"
                         style={{ color: "inherit", textDecoration: "none" }}
                     >
-                        <strong style={{ color: "var(--color-accent)" }}>Shot Nest -</strong>
+                        <strong style={{ color: "var(--color-accent)" }}>Shot Nest</strong>
                     </a>{" "}
-                    Tüm Hakları Saklıdır
+                    - {t.footer.copyright}
                 </p>
             </div>
         </>

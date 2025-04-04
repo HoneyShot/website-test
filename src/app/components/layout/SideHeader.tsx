@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import DrawerFooter from "./DrawerFooter";
 import ThemeToggle from "../ThemeToggle";
 import { useLanguage, default as LanguageToggle } from "../LanguageContext";
@@ -22,8 +23,15 @@ export default function SideHeader() {
     setDrawerExpanded(false);
   };
   
-  // Use the items from the translation
-  const items: string[] = ["Dashboard", "Settings", "Profile", "Logout"];
+  // Navigation items with their corresponding paths
+  const navItems = [
+    { key: "Dashboard", path: "/" },
+    { key: "Portfolio", path: "/portfolio" },
+    { key: "Blog", path: "/blogs" },
+    { key: "Contact", path: "/contact" },
+    { key: "Settings", path: "/settings" },
+    { key: "Profile", path: "/profile" },
+  ];
 
   return (
     <>
@@ -84,17 +92,18 @@ export default function SideHeader() {
         <div className="flex flex-col items-center relative mt-8">
           <nav>
             <ul className="space-y-6 text-center">
-              {items.map((item) => (
+              {navItems.map((item) => (
                 <li
-                  key={item}
-                  onMouseEnter={() => handleHover(item)}
+                  key={item.key}
+                  onMouseEnter={() => handleHover(item.key)}
                   onMouseLeave={resetHover}
-                  className={`
-            text-lg font-medium cursor-pointer transition-transform duration-300
-            hover:scale-200 hover:z-50
-          `}
+                  className={`text-lg font-medium cursor-pointer transition-transform duration-300
+                    hover:scale-200 hover:z-50
+                  `}
                 >
-                  {t.SideHeader[item as keyof typeof t.SideHeader]}
+                  <Link href={item.path} onClick={() => setOpen(false)}>
+                    {t.SideHeader[item.key as keyof typeof t.SideHeader]}
+                  </Link>
                 </li>
               ))}
             </ul>

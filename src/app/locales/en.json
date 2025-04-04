@@ -7,7 +7,32 @@
         "Dashboard": "Dashboard",
         "Settings": "Preferences", 
         "Profile": "Profile", 
-        "Logout": "Logout"
+        "Logout": "Logout",
+        "Portfolio": "Portfolio",
+        "Blog": "Blog",
+        "Contact": "Contact"
+    },
+    "landing": {
+        "title": "Welcome",
+        "subtitle": "Modern Web Development & Cloud Solutions",
+        "portfolioCard": {
+            "title": "Portfolio",
+            "description": "View my work and projects in full stack development, cloud services, and web applications.",
+            "cta": "View Portfolio"
+        },
+        "blogCard": {
+            "title": "Blog",
+            "description": "Technical articles and insights about software development and cloud technologies.",
+            "cta": "Read Blog"
+        },
+        "contactCard": {
+            "title": "Contact",
+            "description": "Get in touch for collaboration, opportunities, or just to say hello.",
+            "cta": "Contact Me"
+        }
+    },
+    "footer": {
+        "copyright": "All rights reserved."
     }
-  }
+}
   

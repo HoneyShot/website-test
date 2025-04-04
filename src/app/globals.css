@@ -31,6 +31,12 @@
   --color-accent-hover: #d97706;
   /* amber-600 */
 
+  /* Background Accents */
+  --color-primary-subtle: rgba(16, 185, 129, 0.1);
+  --color-accent-subtle: rgba(245, 158, 11, 0.1);
+  --navy-subtle: rgba(30, 58, 138, 0.1);
+  --card-bg: #fafafa;
+
   /* Alerts */
   --alert-success: #22c55e;
   /* green-500 */
@@ -78,6 +84,12 @@
   /* amber-400 */
   --color-accent-hover: #f59e0b;
 
+  /* Background Accents */
+  --color-primary-subtle: rgba(16, 185, 129, 0.15);
+  --color-accent-subtle: rgba(245, 158, 11, 0.15);
+  --navy-subtle: rgba(30, 58, 138, 0.15);
+  --card-bg: #111827;
+
   /* Alerts */
   --alert-success: #4ade80;
   /* green-400 */
@@ -113,4 +125,45 @@ code {
   padding: 0.2rem 0.4rem;
   border-radius: 0.25rem;
   font-family: var(--font-mono);
+}
+
+@keyframes fluidGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fluid-text {
+  background-size: 200% 200%;
+  animation: fluidGradient 3s infinite linear;
+}
+
+@keyframes fluidDivider {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.fluid-divider {
+  background-size: 200% 100%;
+  animation: fluidDivider 3s infinite linear;
+}
+
+@keyframes fluidTextColor {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.fluid-text {
+  background-size: 200% 200%;
+  animation: fluidTextColor 4s infinite linear;
 }

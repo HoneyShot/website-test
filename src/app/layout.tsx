@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SideHeader from "./components/layout/SideHeader";
-import Footer from "./components/layout/Footer"
+import Footer from "./components/layout/Footer";
+import Logo from "./components/layout/Logo";
 import { LanguageProvider } from "./components/LanguageContext";
 
 const geistSans = Geist({
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Web Site",
-  description: "My Web Site Test",
+  title: "Full Stack Engineer Portfolio",
+  description: "Portfolio showcasing expertise in Full Stack Software Development, Cloud Services, and Web Applications",
 };
 
 export default function RootLayout({
@@ -26,9 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <LanguageProvider>
+          <div className="fixed top-4 left-4 z-40">
+            <Logo />
+          </div>
           <SideHeader />
           {children}
           <Footer />
