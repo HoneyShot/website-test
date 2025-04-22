@@ -52,6 +52,31 @@
   /* zinc-300 */
   --selection: #a7f3d0;
   /* emerald-200 */
+
+  /* Social Media Colors */
+  --facebook: #1877f2;
+  --twitter: #1da1f2;
+  --instagram: #e1306c;
+  --linkedin: #0077b5;
+  --youtube: #ff0000;
+  --x-twitter: #000000;
+
+
+  /* Text Colors */
+  --text-primary: #171717;
+  --text-secondary: #6b7280;
+  --text-accent: #f59e0b;
+  --text-error: #ef4444;
+  --text-success: #22c55e;
+  --text-warning: #eab308;
+
+  /* placeholder colors */
+  --placeholder-primary: #9ca3af;
+  --placeholder-secondary: #6b7280;
+  --placeholder-accent: #f59e0b;
+  --placeholder-error: #ef4444;
+  --placeholder-success: #22c55e;
+  --placeholder-warning: #eab308;
 }
 
 /* 🌑 Dark Theme */
@@ -105,6 +130,30 @@
   /* gray-600 */
   --selection: #065f46;
   /* emerald-900 */
+
+  /* Social Media Colors */
+  --facebook: #1877f2;
+  --twitter: #1da1f2;
+  --instagram: #e1306c;
+  --linkedin: #0077b5;
+  --youtube: #ff0000;
+  --x-twitter: #f0f0f0;
+
+  /* Text Colors */
+  --text-primary: #ededed;
+  --text-secondary: #9ca3af;
+  --text-accent: #fbbf24;
+  --text-error: #f87171;
+  --text-success: #4ade80;
+  --text-warning: #facc15;
+
+  /* placeholder colors */
+  --placeholder-primary: #9ca3af;
+  --placeholder-secondary: #6b7280;
+  --placeholder-accent: #fbbf24;
+  --placeholder-error: #f87171;
+  --placeholder-success: #4ade80;
+  --placeholder-warning: #facc15;
 }
 
 /* Global Styles */

@@ -3,6 +3,7 @@
     "light": "Aydınlık Mod",
     "dark": "Karanlık Mod",
     "menu": "Menü",
+    "language":"Dil",
     "SideHeader": {
         "Dashboard": "Ana Sayfa",
         "Settings": "Seçenekler", 
@@ -11,6 +12,106 @@
         "Portfolio": "Portföy",
         "Blog": "Blog",
         "Contact": "İletişim"
+    },
+    "auth": {
+        "welcome": "Hoş Geldiniz",
+        "signIn": "Giriş Yap",
+        "signUp": "Kayıt Ol",
+        "signOut": "Çıkış Yap",
+        "dashboard": "Kontrol Paneli",
+        "email": "E-posta",
+        "password": "Şifre",
+        "name": "Ad Soyad",
+        "createAccount": "Hesap Oluştur",
+        "alreadyHaveAccount": "Zaten hesabınız var mı?",
+        "dontHaveAccount": "Hesabınız yok mu?",
+        "signInToAccount": "Hesabınıza giriş yapın",
+        "createNewAccount": "Yeni bir hesap oluşturun",
+        "signingIn": "Giriş yapılıyor...",
+        "creatingAccount": "Hesap oluşturuluyor...",
+        "signingOut": "Çıkış yapılıyor...",
+        "redirecting": "Yönlendiriliyorsunuz...",
+        "error": "Kimlik Doğrulama Hatası",
+        "invalidCredentials": "Geçersiz e-posta veya şifre.",
+        "accessDenied": "Bu kaynağa erişim izniniz yok.",
+        "verificationError": "Doğrulama bağlantısı artık geçerli değil.",
+        "returnToSignIn": "Giriş sayfasına dön",
+        "continueWith": "Şununla devam et",
+        "orContinueWith": "Veya şununla devam et",
+        "or": "veya",
+        "termsAgreement": "Kabul ediyorum",
+        "termsOfService": "Kullanım Koşulları",
+        "and": "ve",
+        "privacyPolicy": "Gizlilik Politikası",
+        "rememberMe": "Beni hatırla",
+        "forgotPassword": "Şifremi unuttum?"
+    },
+    "notFound": {
+        "title": "Sayfa Bulunamadı",
+        "subtitle": "Üzgünüz! Aradığınız sayfa mevcut değil.",
+        "description": "Erişmeye çalıştığınız sayfa taşınmış, silinmiş veya hiç var olmamış görünüyor.",
+        "backToHome": "Ana Sayfaya Dön",
+        "suggestions": "Şunları deneyebilirsiniz:",
+        "checkUrl": "URL'de yazım hatası olup olmadığını kontrol edin",
+        "visitHomepage": "Ana sayfamızı ziyaret edin",
+        "searchSite": "Sitemizde arama yapın",
+        "contactSupport": "Yardım için destek ekibiyle iletişime geçin"
+    },
+    "legal": {
+        "termsOfService": {
+            "title": "Kullanım Koşulları",
+            "lastUpdated": "Son Güncelleme: 1 Haziran 2023",
+            "introduction": "Platformumuza hoş geldiniz. Hizmetimize erişerek veya kullanarak, bu Kullanım Koşulları ile bağlı olmayı kabul etmiş olursunuz.",
+            "sections": [
+                {
+                    "title": "1. Koşulların Kabulü",
+                    "content": "Hizmetlerimize erişerek veya kullanarak, bu Kullanım Koşulları ve tüm geçerli yasa ve düzenlemelere bağlı olmayı kabul edersiniz. Bu koşullardan herhangi biriyle aynı fikirde değilseniz, bu siteyi kullanmaktan veya erişmekten men edilirsiniz."
+                },
+                {
+                    "title": "2. Kullanıcı Hesapları",
+                    "content": "Bizimle bir hesap oluşturduğunuzda, doğru, eksiksiz ve güncel bilgiler sağlamalısınız. Şifrenin korunmasından ve hesabınız altında gerçekleşen tüm etkinliklerden siz sorumlusunuz."
+                },
+                {
+                    "title": "3. Fikrî Mülkiyet",
+                    "content": "Hizmet ve orijinal içeriği, özellikleri ve işlevselliği bize aittir ve uluslararası telif hakkı, ticari marka, patent, ticari sır ve diğer fikrî mülkiyet yasaları tarafından korunmaktadır."
+                },
+                {
+                    "title": "4. Sonlandırma",
+                    "content": "Hesabınızı sonlandırabilir veya askıya alabilir ve hizmete erişimi, önceden bildirimde bulunmaksızın veya sorumluluk olmaksızın, tamamen kendi takdirimize bağlı olarak, herhangi bir nedenle engelleyebiliriz."
+                },
+                {
+                    "title": "5. Koşullardaki Değişiklikler",
+                    "content": "Bu Koşulları herhangi bir zamanda değiştirme veya değiştirme hakkını saklı tutarız. Bu Koşulları değişiklikler için periyodik olarak gözden geçirmek sizin sorumluluğunuzdadır."
+                }
+            ]
+        },
+        "privacyPolicy": {
+            "title": "Gizlilik Politikası",
+            "lastUpdated": "Son Güncelleme: 1 Haziran 2023",
+            "introduction": "Bu Gizlilik Politikası, hizmetlerimizi kullanırken kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı ve paylaştığımızı açıklar.",
+            "sections": [
+                {
+                    "title": "1. Topladığımız Bilgiler",
+                    "content": "Adınız, e-posta adresiniz ve sağlamayı seçtiğiniz diğer bilgiler gibi doğrudan bize sağladığınız bilgileri topluyoruz. Ayrıca, hizmetlerimizi kullandığınızda, günlük verileri ve cihaz bilgileri dahil olmak üzere otomatik olarak bilgi topluyoruz."
+                },
+                {
+                    "title": "2. Bilgilerinizi Nasıl Kullanıyoruz",
+                    "content": "Topladığımız bilgileri, hizmetlerimizi sağlamak, sürdürmek ve geliştirmek, sizinle iletişim kurmak ve hizmetlerimizi ve kullanıcılarımızı korumak için kullanıyoruz."
+                },
+                {
+                    "title": "3. Bilgi Paylaşımı",
+                    "content": "Kişisel bilgilerinizi, hizmetlerimizin işletilmesinde bize yardımcı olan hizmet sağlayıcılar gibi, bu politikada açıklananlar dışında üçüncü taraflarla paylaşmıyoruz."
+                },
+                {
+                    "title": "4. Veri Güvenliği",
+                    "content": "Kişisel bilgilerinizi kayıp, hırsızlık, kötüye kullanım ve yetkisiz erişim, ifşa, değiştirme ve imhaya karşı korumak için makul önlemler alıyoruz."
+                },
+                {
+                    "title": "5. Haklarınız",
+                    "content": "Bizimle iletişime geçerek kişisel bilgilerinize erişebilir, düzeltebilir veya silebilirsiniz. Ayrıca bizden gelen iletişimleri almaktan da vazgeçebilirsiniz."
+                }
+            ]
+        }
     },
     "landing": {
         "title": "Hoş Geldiniz",
@@ -33,6 +134,60 @@
     },
     "footer": {
         "copyright": "Tüm Hakları Saklıdır."
+    },
+    "contact": {
+        "title": "İletişim",
+        "description": "İşbirliği, fırsatlar veya sadece merhaba demek için iletişime geçin.",
+        "cta": "İletişime Geç",
+        "name": "Ad Soyad",
+        "email": "E-posta",
+        "message": "Mesaj",
+        "send": "Gönder",
+        "success": "Mesaj gönderildi.",
+        "error": "Mesaj gönderimi hatası.",
+        "subject": "Konu"
+    },
+    "blog": {
+        "title": "Blog",
+        "description": "Web geliştirme, tasarım desenleri ve teknoloji trendleri hakkında en son düşüncelerimi, eğitimlerimi ve içgörülerimi keşfedin.",
+        "searchPlaceholder": "Makalelerde ara...",
+        "noArticlesFound": "Makale bulunamadı",
+        "tryDifferentSearch": "Farklı bir arama terimi deneyin",
+        "readMore": "Devamını Oku",
+        "categories": {
+            "Development": "Geliştirme",
+            "Design": "Tasarım",
+            "Security": "Güvenlik",
+            "Accessibility": "Erişilebilirlik",
+            "Performance": "Performans"
+        },
+        "BlogDetail": {
+            "viewAllArticles": "Tüm Makaleleri Görüntüle",
+            "tableOfContents": "İçindekiler",
+            "relatedArticles": "İlgili Yazılar",
+            "backToBlog": "Blog'a Dön",
+            "part": "Bölüm",
+            "views": "Görüntüleme",
+            "tags": "Etiketler",
+            "shareArticle": "Makaleyi Paylaş",
+            "updatedOn": "Güncellendi",
+            "liked": "Beğenildi",
+            "like": "Beğen"
+        },
+        "readTime": "dk okuma",
+        "detail": {
+            "publishedOn": "Yayınlanma tarihi",
+            "tableOfContents": "İçindekiler",
+            "share": "Bu makaleyi paylaş",
+            "shareVia": "Paylaş",
+            "relatedPosts": "İlgili Yazılar",
+            "comments": "Yorumlar",
+            "leaveComment": "Yorum yap",
+            "backToAllPosts": "Tüm yazılara dön",
+            "postNotFound": "Blog yazısı bulunamadı",
+            "nextPost": "Sonraki Yazı",
+            "previousPost": "Önceki Yazı"
+        }
     }
 }
   

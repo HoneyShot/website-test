@@ -4,7 +4,8 @@ import "./globals.css";
 import SideHeader from "./components/layout/SideHeader";
 import Footer from "./components/layout/Footer";
 import Logo from "./components/layout/Logo";
-import { LanguageProvider } from "./components/LanguageContext";
+import Providers from "./components/Providers";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,14 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <LanguageProvider>
+        <Providers>
           <div className="fixed top-4 left-4 z-40">
             <Logo />
           </div>
           <SideHeader />
           {children}
           <Footer />
-        </LanguageProvider>
+        </Providers>
       </body>
     </html>
   );

@@ -1,17 +1,26 @@
 // src/components/SideHeader.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import DrawerFooter from "./DrawerFooter";
 import ThemeToggle from "../ThemeToggle";
 import { useLanguage, default as LanguageToggle } from "../LanguageContext";
+import AuthNav from "./AuthNav";
+import { usePageContext } from "../PageContext";
 
 export default function SideHeader() {
+  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
   const [hovered, setHovered] = useState<string | null>(null);
   const [drawerExpanded, setDrawerExpanded] = useState(false);
   const { t } = useLanguage();
+  const { pageType } = usePageContext();
+
+  // Only run client-side code after component is mounted
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleHover = (item: string) => {
     setHovered(item);
@@ -22,33 +31,41 @@ export default function SideHeader() {
     setHovered(null);
     setDrawerExpanded(false);
   };
-  
+
   // Navigation items with their corresponding paths
   const navItems = [
     { key: "Dashboard", path: "/" },
     { key: "Portfolio", path: "/portfolio" },
     { key: "Blog", path: "/blogs" },
-    { key: "Contact", path: "/contact" },
-    { key: "Settings", path: "/settings" },
-    { key: "Profile", path: "/profile" },
+    { key: "Contact", path: "/contact" }
   ];
+
+  // Don't show the menu button on 404 pages
+  const showMenuButton = pageType !== "notFound";
+
+  // Render a minimal version during SSR to avoid hydration mismatches
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <>
-      {/* Toggle Button */}
-      <button
-        onClick={() => setOpen(true)}
-        className={`
-          fixed top-4 right-4 z-50 px-4 py-2 rounded-md shadow-lg text-white
-          transition-all duration-500 ease-in-out
-          ${open ? "translate-x-[100vw] -translate-y-24 opacity-0 pointer-events-none" : "translate-x-0 translate-y-0 opacity-100"}
-        `}
-        style={{
-          backgroundColor: "var(--color-primary)",
-        }}
-      >
-        ☰ {t.menu}
-      </button>
+      {/* Toggle Button - Hidden on 404 pages */}
+      {showMenuButton && (
+        <button
+          onClick={() => setOpen(true)}
+          className={`
+            fixed top-4 right-4 z-50 px-4 py-2 rounded-md shadow-lg text-white
+            transition-all duration-500 ease-in-out
+            ${open ? "translate-x-[100vw] -translate-y-24 opacity-0 pointer-events-none" : "translate-x-0 translate-y-0 opacity-100"}
+          `}
+          style={{
+            backgroundColor: "var(--color-primary)",
+          }}
+        >
+          ☰ {t.menu}
+        </button>
+      )}
 
       {/* Off-canvas drawer */}
       <div
@@ -97,9 +114,7 @@ export default function SideHeader() {
                   key={item.key}
                   onMouseEnter={() => handleHover(item.key)}
                   onMouseLeave={resetHover}
-                  className={`text-lg font-medium cursor-pointer transition-transform duration-300
-                    hover:scale-200 hover:z-50
-                  `}
+                  className="text-lg font-medium cursor-pointer transition-transform duration-300 hover:scale-200 hover:z-50"
                 >
                   <Link href={item.path} onClick={() => setOpen(false)}>
                     {t.SideHeader[item.key as keyof typeof t.SideHeader]}
@@ -109,7 +124,12 @@ export default function SideHeader() {
             </ul>
           </nav>
         </div>
-        
+
+        {/* Auth Navigation */}
+        <div className="mt-8 px-4 py-2 border-t" style={{ borderColor: "var(--border-color)" }}>
+          <AuthNav />
+        </div>
+
         {/* Footer section with toggles and social icons */}
         <div className="absolute bottom-0 w-full">
           {/* Toggles Container */}
@@ -118,7 +138,7 @@ export default function SideHeader() {
             <LanguageToggle />
             <ThemeToggle />
           </div>
-          
+
           {/* Social Icons */}
           <DrawerFooter />
         </div>

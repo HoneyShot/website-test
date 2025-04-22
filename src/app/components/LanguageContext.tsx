@@ -63,7 +63,8 @@ export default function LanguageToggle() {
           transform: isHovered ? "scale(1.05)" : "scale(1)"
         }}
       >
-        Dil:
+        {/* Dil: */}
+        {t.language}
       </span>
       <div className="flex gap-2">
         <button

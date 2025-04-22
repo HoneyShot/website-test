@@ -3,6 +3,7 @@
     "light": "Light Mode",
     "dark": "Dark Mode",
     "menu": "Menu",
+    "language": "Language",
     "SideHeader": {
         "Dashboard": "Dashboard",
         "Settings": "Preferences", 
@@ -11,6 +12,106 @@
         "Portfolio": "Portfolio",
         "Blog": "Blog",
         "Contact": "Contact"
+    },
+    "auth": {
+        "welcome": "Welcome",
+        "signIn": "Sign In",
+        "signUp": "Sign Up",
+        "signOut": "Sign Out",
+        "dashboard": "Dashboard",
+        "email": "Email",
+        "password": "Password",
+        "name": "Full Name",
+        "createAccount": "Create Account",
+        "alreadyHaveAccount": "Already have an account?",
+        "dontHaveAccount": "Don't have an account?",
+        "signInToAccount": "Sign in to your account",
+        "createNewAccount": "Create a new account",
+        "signingIn": "Signing in...",
+        "creatingAccount": "Creating account...",
+        "signingOut": "Signing out...",
+        "redirecting": "You will be redirected shortly.",
+        "error": "Authentication Error",
+        "invalidCredentials": "Invalid email or password.",
+        "accessDenied": "You do not have permission to access this resource.",
+        "verificationError": "The verification link is no longer valid.",
+        "returnToSignIn": "Return to sign in",
+        "continueWith": "Continue with",
+        "orContinueWith": "Or continue with",
+        "or": "or",
+        "termsAgreement": "I agree to the",
+        "termsOfService": "Terms of Service",
+        "and": "and",
+        "privacyPolicy": "Privacy Policy",
+        "rememberMe": "Remember me",
+        "forgotPassword": "Forgot password?"
+    },
+    "notFound": {
+        "title": "Page Not Found",
+        "subtitle": "Oops! The page you're looking for doesn't exist.",
+        "description": "It seems the page you were trying to access has been moved, deleted, or never existed in the first place.",
+        "backToHome": "Back to Home",
+        "suggestions": "You might want to:",
+        "checkUrl": "Check the URL for typos",
+        "visitHomepage": "Visit our homepage",
+        "searchSite": "Search our site",
+        "contactSupport": "Contact support for help"
+    },
+    "legal": {
+        "termsOfService": {
+            "title": "Terms of Service",
+            "lastUpdated": "Last Updated: June 1, 2023",
+            "introduction": "Welcome to our platform. By accessing or using our service, you agree to be bound by these Terms of Service.",
+            "sections": [
+                {
+                    "title": "1. Acceptance of Terms",
+                    "content": "By accessing or using our services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site."
+                },
+                {
+                    "title": "2. User Accounts",
+                    "content": "When you create an account with us, you must provide accurate, complete, and current information. You are responsible for safeguarding the password and for all activities that occur under your account."
+                },
+                {
+                    "title": "3. Intellectual Property",
+                    "content": "The service and its original content, features, and functionality are owned by us and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws."
+                },
+                {
+                    "title": "4. Termination",
+                    "content": "We may terminate or suspend your account and bar access to the service immediately, without prior notice or liability, under our sole discretion, for any reason."
+                },
+                {
+                    "title": "5. Changes to Terms",
+                    "content": "We reserve the right to modify or replace these Terms at any time. It is your responsibility to review these Terms periodically for changes."
+                }
+            ]
+        },
+        "privacyPolicy": {
+            "title": "Privacy Policy",
+            "lastUpdated": "Last Updated: June 1, 2023",
+            "introduction": "This Privacy Policy describes how we collect, use, and share your personal information when you use our services.",
+            "sections": [
+                {
+                    "title": "1. Information We Collect",
+                    "content": "We collect information you provide directly to us, such as your name, email address, and any other information you choose to provide. We also collect information automatically when you use our services, including log data and device information."
+                },
+                {
+                    "title": "2. How We Use Your Information",
+                    "content": "We use the information we collect to provide, maintain, and improve our services, communicate with you, and protect our services and users."
+                },
+                {
+                    "title": "3. Information Sharing",
+                    "content": "We do not share your personal information with third parties except as described in this policy, such as with service providers who assist us in operating our services."
+                },
+                {
+                    "title": "4. Data Security",
+                    "content": "We take reasonable measures to help protect your personal information from loss, theft, misuse, and unauthorized access, disclosure, alteration, and destruction."
+                },
+                {
+                    "title": "5. Your Rights",
+                    "content": "You may access, correct, or delete your personal information by contacting us. You may also opt out of receiving communications from us."
+                }
+            ]
+        }
     },
     "landing": {
         "title": "Welcome",
@@ -33,6 +134,60 @@
     },
     "footer": {
         "copyright": "All rights reserved."
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "Get in touch for collaboration, opportunities, or just to say hello.",
+        "cta": "Contact Me",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send",
+        "success": "Message sent successfully.",
+        "error": "Message sending failed.",
+        "subject": "Subject"
+    },
+    "blog": {
+        "title": "Blog",
+        "description": "Explore my latest thoughts, tutorials, and insights on web development, design patterns, and technology trends.",
+        "searchPlaceholder": "Search articles...",
+        "noArticlesFound": "No articles found",
+        "tryDifferentSearch": "Try a different search term",
+        "readMore": "Read More",
+        "categories": {
+            "Development": "Development",
+            "Design": "Design",
+            "Security": "Security",
+            "Accessibility": "Accessibility",
+            "Performance": "Performance"
+        },
+        "BlogDetail": {
+            "viewAllArticles": "View All Articles",
+            "tableOfContents": "Table of Contents",
+            "relatedArticles": "Related Articles",
+            "backToBlog": "Back to Blog",
+            "part": "Part",
+            "views": "Views",
+            "tags": "Tags",
+            "shareArticle": "Share Article",
+            "updatedOn": "Updated on",
+            "liked": "Liked",
+            "like": "Like"
+        },
+        "readTime": "min read",
+        "detail": {
+            "publishedOn": "Published on",
+            "tableOfContents": "Table of Contents",
+            "share": "Share this article",
+            "shareVia": "Share via",
+            "relatedPosts": "Related Posts",
+            "comments": "Comments",
+            "leaveComment": "Leave a comment",
+            "backToAllPosts": "Back to all posts",
+            "postNotFound": "Blog post not found",
+            "nextPost": "Next Post",
+            "previousPost": "Previous Post"
+        }
     }
 }
   

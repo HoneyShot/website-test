@@ -1,51 +1,71 @@
 "use client";
 
-import { useLanguage } from "../components/LanguageContext";
+import { useAuth } from "../components/AuthContext";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-export default function dashboard() {
-    return (<div className="grid grid-cols-1 md:grid-cols-2 min-h-screen">
-        {/* Light Theme Preview */}
-        <div className="bg-gray-50 text-gray-800 p-10 space-y-10">
-            <h1 className="text-2xl font-bold text-emerald-500">Light Theme</h1>
+export default function Dashboard() {
+  const { isAuthenticated, status } = useAuth();
+  const router = useRouter();
 
-            <div className="space-y-4">
-                <button className="bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-4 py-2 rounded">
-                    Primary Button
-                </button>
-                <p>
-                    This is some paragraph text.{" "}
-                    <a href="#" className="text-emerald-600 underline hover:text-emerald-700">
-                        Learn more
-                    </a>
-                </p>
-                <div className="p-4 border border-gray-200 rounded">
-                    This is a card or box with subtle border.
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      router.push("/auth/signin");
+    }
+  }, [status, router]);
+
+  if (status === "loading") {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold">Loading...</h2>
                 </div>
             </div>
+    );
+  }
 
-            <footer className="text-sm text-gray-500">© 2025 Your Name</footer>
+  if (!isAuthenticated) {
+    return null; // Will redirect in useEffect
+  }
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="mb-8 text-3xl font-bold">Dashboard</h1>
+      
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* Dashboard Card 1 */}
+        <div className="rounded-lg border p-6 shadow-sm">
+          <h2 className="mb-4 text-xl font-semibold">Profile Overview</h2>
+          <p className="text-gray-600">
+            View and manage your profile information.
+          </p>
+          <button className="mt-4 rounded bg-emerald-600 px-4 py-2 text-white hover:bg-emerald-500">
+            View Profile
+          </button>
         </div>
 
-        {/* Dark Theme Preview */}
-        <div className="bg-gray-900 text-gray-100 p-10 space-y-10">
-            <h1 className="text-2xl font-bold text-emerald-400">Dark Theme</h1>
-
-            <div className="space-y-4">
-                <button className="bg-emerald-400 hover:bg-emerald-500 text-black font-medium px-4 py-2 rounded">
-                    Primary Button
+        {/* Dashboard Card 2 */}
+        <div className="rounded-lg border p-6 shadow-sm">
+          <h2 className="mb-4 text-xl font-semibold">Recent Activity</h2>
+          <p className="text-gray-600">
+            Check your recent account activity and notifications.
+          </p>
+          <button className="mt-4 rounded bg-emerald-600 px-4 py-2 text-white hover:bg-emerald-500">
+            View Activity
                 </button>
-                <p>
-                    This is some paragraph text.{" "}
-                    <a href="#" className="text-emerald-300 underline hover:text-emerald-400">
-                        Learn more
-                    </a>
-                </p>
-                <div className="p-4 border border-gray-700 rounded">
-                    This is a card or box with subtle border.
-                </div>
             </div>
 
-            <footer className="text-sm text-gray-400">© 2025 Your Name</footer>
+        {/* Dashboard Card 3 */}
+        <div className="rounded-lg border p-6 shadow-sm">
+          <h2 className="mb-4 text-xl font-semibold">Settings</h2>
+          <p className="text-gray-600">
+            Manage your account settings and preferences.
+          </p>
+          <button className="mt-4 rounded bg-emerald-600 px-4 py-2 text-white hover:bg-emerald-500">
+            Manage Settings
+          </button>
         </div>
-    </div>);
+      </div>
+    </div>
+  );
 }
