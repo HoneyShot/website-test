@@ -8,18 +8,18 @@ export async function POST(
   { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = await params;
+    const { id } = params; // ✅ FIXED: removed "await"
     const { db } = await connectToDatabase();
-    
+
     const result = await db.collection("blogs").updateOne(
       { _id: new ObjectId(id) },
       { $inc: { likes: 1 } }
     );
-    
+
     if (result.matchedCount === 0) {
       return NextResponse.json({ success: false }, { status: 404 });
     }
-    
+
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Error liking blog post:", error);
