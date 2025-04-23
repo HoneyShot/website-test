@@ -1,14 +1,15 @@
 // src/app/api/blogs/[id]/like/route.ts
 import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 import { connectToDatabase } from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
 
 export async function POST(
-  req: Request,
-  { params }: { params: { id: string } }
+  req: NextRequest,
+  context: { params: { id: string } }
 ) {
   try {
-    const { id } = params; // ✅ FIXED: removed "await"
+    const { id } = context.params;
     const { db } = await connectToDatabase();
 
     const result = await db.collection("blogs").updateOne(
