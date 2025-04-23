@@ -6,10 +6,10 @@ import { ObjectId } from "mongodb";
 
 export async function POST(
   req: NextRequest,
-  context: { params: { id: string } }
+  { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = context.params;
+    const { id } = params;
     const { db } = await connectToDatabase();
 
     const result = await db.collection("blogs").updateOne(
